@@ -1,0 +1,75 @@
+
+#include <stdio.h>
+
+int main() {
+    int choice;
+    float temperature;
+    int humidity;
+
+    printf("================================\n");
+    printf("       WEATHER FORECAST APP\n");
+    printf("================================\n");
+
+    printf("\nSelect a city:\n");
+    printf("1. Hyderabad\n");
+    printf("2. Mumbai\n");
+    printf("3. Delhi\n");
+    printf("4. Chennai\n");
+
+    printf("\nEnter your choice: ");
+    scanf("%d", &choice);
+
+    switch (choice) {
+
+        case 1:
+            printf("\nCity: Hyderabad\n");
+            temperature = 32;
+            humidity = 45;
+            break;
+
+        case 2:
+            printf("\nCity: Mumbai\n");
+            temperature = 30;
+            humidity = 75;
+            break;
+
+        case 3:
+            printf("\nCity: Delhi\n");
+            temperature = 28;
+            humidity = 50;
+            break;
+
+        case 4:
+            printf("\nCity: Chennai\n");
+            temperature = 34;
+            humidity = 70;
+            break;
+
+        default:
+            printf("\nInvalid choice!\n");
+            return 0;
+    }
+
+    printf("\n------- WEATHER DETAILS -------\n");
+
+    printf("Temperature: %.1f C\n", temperature);
+    printf("Humidity: %d%%\n", humidity);
+
+    if (temperature >= 35) {
+        printf("Weather: Very Hot\n");
+    }
+    else if (temperature >= 30) {
+        printf("Weather: Hot\n");
+    }
+    else if (temperature >= 20) {
+        printf("Weather: Pleasant\n");
+    }
+    else {
+        printf("Weather: Cold\n");
+    }
+
+    printf("--------------------------------\n");
+    printf("Thank you for using Weather App!\n");
+
+    return 0;
+}
